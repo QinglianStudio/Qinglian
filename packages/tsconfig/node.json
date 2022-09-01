@@ -1,0 +1,13 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "Node.js library",
+    "extends": "./base.json",
+    "compilerOptions": {
+      "esModuleInterop": true,
+      "module": "CommonJS",
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "declaration": true
+    }
+  }
+  

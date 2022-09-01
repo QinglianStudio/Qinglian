@@ -1,0 +1,24 @@
+{
+  "name": "so-cli",
+  "version": "0.0.0",
+  "description": "A cli tool for Ranger",
+  "bin": {
+    "so": "./bin/index.js",
+    "so-client": "./bin/client.js",
+    "so-server": "./bin/server.js"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "southorange1228",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "commander": "^9.4.0",
+    "inquirer": "^9.1.1",
+    "ora": "^6.1.2",
+    "shelljs": "^0.8.5",
+    "so-tsconfig": "workspace:*",
+    "tsx": "^3.9.0"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "so-server",
+  "version": "0.0.0",
+  "description": "A node server Powered with Koa and Typescript",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "koa",
+    "typescript",
+    "server",
+    "so"
+  ],
+  "author": "southorange1228",
+  "license": "MIT"
+}
