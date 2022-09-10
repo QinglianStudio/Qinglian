@@ -25,7 +25,7 @@ module.exports = {
     preset: '@swc-node/jest',
     testPathIgnorePatterns: ['examples', 'fixtures', 'demo', 'style'],
     testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
-    transformIgnorePatterns: ['node_modules/(?!(ora)/)'],
+    transformIgnorePatterns: ['node_modules/(?!(?:.pnpm/)?)(?!(ora|uuid)/)'],
     globalSetup: '<rootDir>/setupTests.js',
     collectCoverageFrom: [
       'packages/**/*.{js,jsx,ts,tsx}',
