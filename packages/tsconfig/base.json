@@ -6,7 +6,9 @@
     "baseUrl": ".",
     "checkJs": true,
     "noEmitOnError": true,
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "lib": ["ES2015","DOM"],
+    "resolveJsonModule": true
   },
   "rootDit": ".",
   "exclude": ["node_modules"]

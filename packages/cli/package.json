@@ -1,11 +1,11 @@
 {
-  "name": "so-cli",
+  "name": "@juzi/cli",
   "version": "0.0.0",
   "description": "A cli tool for Ranger",
   "bin": {
-    "so": "./bin/index.js",
-    "so-client": "./bin/client.js",
-    "so-server": "./bin/server.js"
+    "jz": "./bin/index.js",
+    "jz-client": "./bin/client.js",
+    "jz-server": "./bin/server.js"
   },
   "scripts": {
     "build": "tsc"
@@ -15,10 +15,12 @@
   "dependencies": {
     "chalk": "^5.0.1",
     "commander": "^9.4.0",
+    "execa": "^6.1.0",
     "inquirer": "^9.1.1",
     "ora": "^6.1.2",
     "shelljs": "^0.8.5",
     "so-tsconfig": "workspace:*",
+    "tslib": "^2.4.0",
     "tsx": "^3.9.0"
   }
 }

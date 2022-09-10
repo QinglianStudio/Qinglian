@@ -5,9 +5,9 @@
     "compilerOptions": {
       "esModuleInterop": true,
       "module": "CommonJS",
-      "resolveJsonModule": true,
       "isolatedModules": true,
-      "declaration": true
+      "declaration": true,
+      "importHelpers": true
     }
   }
   
