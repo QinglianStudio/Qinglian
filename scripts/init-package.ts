@@ -1,6 +1,6 @@
-import { execaCommandSync } from "execa";
-import { mkdir, lstat } from "fs/promises";
+import { mkdirSync, existsSync } from "fs";
 import { join } from "path";
+import { execSync } from "child_process";
 
 const PackageNameReg = /^((([A-Za-z]{1,})\-?){1,})(?<!-)$/;
 
@@ -13,15 +13,16 @@ const init = async () => {
     process.exit(-1);
   }
   const packageName = args[2];
-  const packageFolder = join(__dirname, `./packages/${packageName}`);
-  const stat = await lstat(packageFolder);
-  if (stat.isDirectory()) {
+  const packageFolder = join(__dirname, `../packages/${packageName}`);
+  if (existsSync(packageFolder)) {
     console.log(`\n\n 包名：${packageName} 已存在，请更换其他名称 \n\n`);
     process.exit(-1);
   }
-  await mkdir(packageFolder);
+  mkdirSync(packageFolder);
   console.log("\n\n创建子包成功\n\n");
-  execaCommandSync("npm init");
+  execSync(`cd ${packageFolder} && npm init`, {
+    stdio: "inherit",
+  });
 };
 
 init();
