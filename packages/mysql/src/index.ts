@@ -11,8 +11,12 @@ class Db {
 
   private dbInstance: DataSource;
 
-  constructor(options: Partial<Omit<DataSourceOptions,'type'>>) {
-    this.options = { type: "mysql", ...options } as DataSourceOptions;
+  constructor(options: Partial<Omit<DataSourceOptions, "type">>) {
+    this.options = {
+      type: "mysql",
+      synchronize: false,
+      ...options,
+    } as DataSourceOptions;
     this.dbInstance = new DataSource(this.options);
   }
   /**
