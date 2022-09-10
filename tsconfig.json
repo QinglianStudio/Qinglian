@@ -1,0 +1,12 @@
+{
+    "extends": "@juzi/tsconfig/node.json",
+    "compilerOptions": {
+        "importHelpers": false
+    },
+    "include": [
+        "./scripts/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

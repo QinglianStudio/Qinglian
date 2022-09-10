@@ -13,13 +13,13 @@
   "author": "southorange1228",
   "license": "MIT",
   "dependencies": {
+    "@juzi/tsconfig": "workspace:0.0.0",
     "chalk": "^5.0.1",
     "commander": "^9.4.0",
     "execa": "^6.1.0",
     "inquirer": "^9.1.1",
     "ora": "^6.1.2",
     "shelljs": "^0.8.5",
-    "so-tsconfig": "workspace:*",
     "tslib": "^2.4.0",
     "tsx": "^3.9.0"
   }
