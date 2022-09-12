@@ -1,56 +1,35 @@
-import {
-  DataSource,
-  DataSourceOptions,
-  ObjectLiteral,
-  SelectQueryBuilder,
-  Repository,
-} from "typeorm";
+import knex, { Knex } from "knex";
 
-class Db {
-  private options: DataSourceOptions;
+class Mysql {
+  private instance: Knex;
 
-  private dbInstance: DataSource;
+  private options: Knex.MySql2ConnectionConfig;
 
-  constructor(options: Partial<Omit<DataSourceOptions, "type">>) {
-    this.options = {
-      type: "mysql",
-      synchronize: false,
-      ...options,
-    } as DataSourceOptions;
-    this.dbInstance = new DataSource(this.options);
-  }
-  /**
-   * 获取当前链接对象
-   * @returns
-   */
-  getInstance() {
-    return this.dbInstance;
-  }
-  /**
-   * 设置链接属性 并重置对象
-   * @param options
-   */
-  setOptions(options: Partial<DataSourceOptions>) {
-    this.options = {
-      ...this.options,
-      ...options,
-    } as DataSourceOptions;
-    this.dbInstance = new DataSource(this.options);
+  constructor(options: Knex.MySql2ConnectionConfig) {
+    this.options = options;
+    console.log(this.options)
+    this.instance = knex({
+      client: "mysql2",
+      connection: this.options,
+      debug: true
+    });
   }
 
-  /**
-   * 执行命令
-   * @param db
-   * @returns
-   */
-  exec<T extends string | ObjectLiteral>(
-    db: T
-  ): T extends string ? SelectQueryBuilder<any> : Repository<ObjectLiteral> {
-    return typeof db === "string"
-      ? this.dbInstance.createQueryBuilder(db as any)
-      : (this.dbInstance.getRepository(db as any) as any);
+  setOptions(options?: Partial<Knex.MySql2ConnectionConfig>) {
+    this.options ={
+      ...(this.options),
+      ...(options || {}),
+    };
+    this.instance = knex({
+      client: "mysql2",
+      connection: this.options,
+    });
+  }
+
+  exec() {
+    return this.instance;
   }
 }
 
-export { Db };
-export default Db;
+export { Mysql };
+export default Mysql;
