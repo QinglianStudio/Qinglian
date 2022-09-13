@@ -10,7 +10,6 @@ class Mysql {
     this.instance = knex({
       client: "mysql2",
       connection: this.options,
-      debug: true
     });
   }
 
