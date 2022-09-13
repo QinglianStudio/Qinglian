@@ -7,7 +7,6 @@ class Mysql {
 
   constructor(options: Knex.MySql2ConnectionConfig) {
     this.options = options;
-    console.log(this.options)
     this.instance = knex({
       client: "mysql2",
       connection: this.options,
@@ -26,8 +25,20 @@ class Mysql {
     });
   }
 
+  /**
+   * 执行对象
+   * @returns {Knex}
+   */
   exec() {
     return this.instance;
+  }
+
+  /**
+   * 销毁对象
+   */
+  destroy() {
+    this.instance.destroy();
+    this.instance = null;
   }
 }
 

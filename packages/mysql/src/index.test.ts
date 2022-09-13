@@ -1,7 +1,9 @@
 import Mysql from ".";
 
 describe("Mysql Test", () => {
-  it("should connection mysql", async () => {
+  let db = null as Mysql;
+
+  beforeAll(() => {
     const mockConfig = {
       host: "127.0.0.1",
       port: 3306,
@@ -9,8 +11,16 @@ describe("Mysql Test", () => {
       password: "123456",
       database: "test",
     };
-    const db = new Mysql(mockConfig);
+    db = new Mysql(mockConfig);
+  });
+
+  afterAll(() => {
+    db?.destroy?.();
+  });
+
+  it("should connection mysql", async () => {
     expect(db).not.toBeNull();
-    await db.exec().select("*").from("user");
+    const da = await db.exec().select("*").from("info");
+    expect(da.length).toBe(1);
   });
 });
