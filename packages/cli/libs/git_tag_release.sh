@@ -3,6 +3,10 @@
 # 获取最新的tag标签
 tag=$(git tag --list --sort=-version:refname "v*" | head -n 1)
 
+if [ -z $tag ];then
+tag="v0.0.0"
+fi
+
 # 解析版本
 semver_version=${tag:1}
 
