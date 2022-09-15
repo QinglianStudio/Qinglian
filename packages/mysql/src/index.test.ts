@@ -17,16 +17,12 @@ const mockConfig = {
   database: "test",
 };
 
+// @ts-ignore
+knex.mockReturnValue(queryBuilder);
+
 describe("Mysql Test", () => {
-  let db = null as Mysql;
-
-  beforeAll(() => {
-    // @ts-ignore
-    knex.mockReturnValue(queryBuilder);
-    db = new Mysql(mockConfig);
-  });
-
   it("should connection mysql", async () => {
+    const db = new Mysql(mockConfig);
     expect(knex).toBeCalledWith({
       connection: mockConfig,
       client: "mysql2",
@@ -35,6 +31,7 @@ describe("Mysql Test", () => {
   });
 
   it("should exec knex query builder function", async () => {
+    const db = new Mysql(mockConfig);
     await db.exec().select("*").from("info");
     expect(queryBuilder.select).toBeCalledWith("*");
     expect(queryBuilder.from).toBeCalledWith("info");
@@ -42,8 +39,29 @@ describe("Mysql Test", () => {
     expect(queryBuilder.from).toBeCalledTimes(1);
   });
 
-  it("should be destroyed",async () => {
+  it("should be destroyed", async () => {
+    const db = new Mysql(mockConfig);
     await db.destroy();
     expect(queryBuilder.destroy).toBeCalledTimes(1);
-  })
+  });
+
+  it("should support multi db", async () => {
+    const dbs = new Mysql(
+      {
+        db: mockConfig,
+        db2: mockConfig,
+      },
+      { multiple: true }
+    );
+    expect(knex).toBeCalledWith({
+      connection: mockConfig,
+      client: "mysql2",
+    });
+    expect(knex).toBeCalledTimes(5);
+    await dbs.exec('db').select('*').from('info');
+    expect(queryBuilder.select).toBeCalledWith("*");
+    expect(queryBuilder.from).toBeCalledWith("info");
+    expect(queryBuilder.select).toBeCalledTimes(2);
+    expect(queryBuilder.from).toBeCalledTimes(2);
+  });
 });
