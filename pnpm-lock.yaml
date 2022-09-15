@@ -89,6 +89,12 @@ importers:
     dependencies:
       koa: mirrors.tencent.com/koa/2.13.4
 
+  packages/sql-parser:
+    specifiers:
+      cargo-cp-artifact: ^0.1.6
+    devDependencies:
+      cargo-cp-artifact: mirrors.tencent.com/cargo-cp-artifact/0.1.6
+
   packages/tsconfig:
     specifiers: {}
 
@@ -3751,6 +3757,13 @@ packages:
     resolution: {integrity: sha512-N/od11RX+Gsk+1qY/jbPa0R6zJupEa0lxeBG598EbrtblxVCTJsQwbRBm6+V+rxpc5lHKdsXb9RY83cZIPLseA==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/caniuse-lite/-/caniuse-lite-1.0.30001393.tgz}
     name: caniuse-lite
     version: 1.0.30001393
+    dev: true
+
+  mirrors.tencent.com/cargo-cp-artifact/0.1.6:
+    resolution: {integrity: sha512-CQw0doK/aaF7j041666XzuilHxqMxaKkn+I5vmBsd8SAwS0cO5CqVEVp0xJwOKstyqWZ6WK4Ww3O6p26x/Goyg==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/cargo-cp-artifact/-/cargo-cp-artifact-0.1.6.tgz}
+    name: cargo-cp-artifact
+    version: 0.1.6
+    hasBin: true
     dev: true
 
   mirrors.tencent.com/chalk/2.4.2:
