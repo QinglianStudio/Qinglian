@@ -1,12 +1,26 @@
 import { Command } from "commander";
-import pkg from "../package.json";
+import { readFileSync } from "fs";
+import { join } from "path";
+import { release } from "./release";
 
-const { version: cliVersion } = pkg;
+const packageFile = join(__dirname, "../package.json");
+
+const { version: cliVersion } = JSON.parse(
+  readFileSync(packageFile).toString()
+);
 
 const program = new Command();
 
 export const run = async () => {
-  program.name("so").description("🪶 Node Cli for Ranger").version(cliVersion);
+  program.name("jz").description("🪶 Node Cli for Ranger").version(cliVersion);
 
-  program.command("update", "Check 'so-*' package's version").parse();
+  program.command("update").description("Check '@juzi/*' package's version");
+
+  program
+    .command("release")
+    .description("release version use tag or others")
+    .option("-t, --tag", "git tag xxx to release")
+    .action(release);
+
+  program.parse(process.argv);
 };
