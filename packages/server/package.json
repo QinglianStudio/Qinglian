@@ -4,7 +4,7 @@
   "description": "A node server Powered with Koa and Typescript",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc"
   },
   "keywords": [
     "koa",
@@ -13,5 +13,8 @@
     "so"
   ],
   "author": "southorange1228",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.13.4"
+  }
 }
