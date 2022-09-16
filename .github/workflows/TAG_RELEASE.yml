@@ -3,6 +3,7 @@ name: TAG RELEASE
 on:
   push:
     tags:
+    branches-ignore:
   workflow_dispatch:
 
 jobs:
