@@ -1,10 +1,7 @@
-name: build
+name: Rust Project Build
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-  workflow_dispatch: {}
+  workflow_call: 
+  workflow_dispatch: 
 jobs:
   build:
     name: build
@@ -15,16 +12,19 @@ jobs:
         include:
           - build: linux
             os: ubuntu-18.04
+            node: [14.x, 16.x, 18.x]
             rust: nightly
             target: x86_64-unknown-linux-musl
             archive-name: sgf-render-linux.tar.gz
           - build: macos
             os: macos-latest
+            node: [14.x, 16.x, 18.x]
             rust: nightly
             target: x86_64-apple-darwin
             archive-name: sgf-render-macos.tar.gz
           - build: windows
             os: windows-2019
+            node: [14.x, 16.x, 18.x]
             rust: nightly-x86_64-msvc
             target: x86_64-pc-windows-msvc
             archive-name: sgf-render-windows.7z
