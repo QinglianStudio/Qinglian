@@ -1,8 +1,8 @@
 name: MAIN CI
 
 on:
-  tag_push:
-    branches: [ "main" ]
+  push:
+    tags:
   work_dispatch:
 
 jobs:
