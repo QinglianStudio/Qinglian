@@ -1,5 +1,5 @@
 [package]
-name = "@juzi/sql-parser"
+name = "sql-parser"
 version = "0.0.1"
 description = "A SQL parser build with Rust"
 authors = ["southorange1228"]
