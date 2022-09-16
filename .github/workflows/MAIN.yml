@@ -8,9 +8,7 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [14.x, 16.x, 18.x]
@@ -32,5 +30,7 @@ jobs:
       run: pnpm test
     - name: Build
       run: pnpm build
+
+  call-rust-workflow:
     - name: Build Rust Project
       uses: ./.github/workflows/RUST_BUILD.yml@main
