@@ -28,5 +28,5 @@ jobs:
         cache: 'pnpm'
     - name: Install dependencies
       run: pnpm install
-    - run: pnpm run build --if-present
+    - run: pnpm run build
     - run: npm test
