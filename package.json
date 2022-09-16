@@ -7,7 +7,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build --no-cache",
+    "build": "turbo run build --no-cache --filter=!@juzi/sql-parser",
     "dev": "turbo run dev --parallel --no-cache",
     "lint": "turbo run lint",
     "test": "cross-env NODE_OPTIONS=--max_old_space_size=4096 jest --runInBand --detectOpenHandles",
