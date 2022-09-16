@@ -3,7 +3,7 @@ name: MAIN CI
 on:
   push:
     tags:
-  work_dispatch:
+  workflow_dispatch:
 
 jobs:
   download-artifacts:
