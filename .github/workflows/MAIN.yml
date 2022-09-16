@@ -1,4 +1,4 @@
-name: MAIN PROCESS CI
+name: MAIN CI
 
 on:
   push:
