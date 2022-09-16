@@ -18,3 +18,13 @@ jobs:
         workflow: RUST_RELEASE.yml
         path: packages/sql-parser
     - run: ls packages/sql-parser/dist
+
+    - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with: 
+          token: ${{ secrets.ACCESS_TOKEN }}
+          commit-message: release rust project build 
+          title: Release Rust Project Build Artifacts
+          body: |
+            - release new rust project artifacts
+          branch: release/rust_project
