@@ -16,3 +16,6 @@ jobs:
         workflow: RUST_RELEASE.yml
         path: packages/sql-parser/dist
     - run: ls packages/sql-parser/dist
+    - run: 7z x packages/sql-parser/dist/binary_bin_with_cross_platform.zip
+    - run: ls packages/sql-parser/dist
+    - run: rm -f packages/sql-parser/dist/binary_bin_with_cross_platform.zip
