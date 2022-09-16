@@ -1,0 +1,18 @@
+name: MAIN CI
+
+on:
+  tag_push:
+    branches: [ "main" ]
+  work_dispatch:
+
+jobs:
+  download-artifacts:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: dawidd6/action-download-artifact@v2
+      with:
+        workflow_conclusion: success
+        workflow: RUST_RELEASE.yml
+        path: packages/sql-parser/dist
+    - run: ls packages/sql-parser/dist

@@ -59,14 +59,3 @@ jobs:
         with:
             name: binary_bin_with_cross_platform
             path: packages/sql-parser/lib/*.node
-          
-  PR_Artifact:
-    name: Download File
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-        - name: Download Artifact
-          uses: actions/download-artifact@v3
-          with:
-              name: binary_bin_with_cross_platform
-        - run: ls -R
