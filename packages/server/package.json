@@ -15,6 +15,7 @@
   "author": "southorange1228",
   "license": "MIT",
   "dependencies": {
+    "@types/koa": "^2.13.5",
     "koa": "^2.13.4"
   }
 }

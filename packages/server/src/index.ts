@@ -1,7 +1,9 @@
 import Koa from "koa";
 
-class App {
-  constructor() {}
+class App extends Koa {
+  constructor() {
+    super()
+  }
 }
 
 export { App };
