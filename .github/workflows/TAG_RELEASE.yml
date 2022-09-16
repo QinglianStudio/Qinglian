@@ -17,7 +17,7 @@ jobs:
         workflow_conclusion: success
         workflow: RUST_RELEASE.yml
         path: packages/sql-parser
-    - run: ls packages/sql-parser/dist
+    - run: ls packages/sql-parser/bins
 
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v4
