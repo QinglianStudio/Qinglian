@@ -57,5 +57,5 @@ jobs:
       - name: Release Artifact
         uses: actions/upload-artifact@v3
         with:
-            name: binary_bin_with_cross_platform
+            name: dist
             path: packages/sql-parser/lib/*.node

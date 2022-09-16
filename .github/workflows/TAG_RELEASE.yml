@@ -4,6 +4,7 @@ on:
   push:
     tags:
     branches-ignore:
+      - '*'
   workflow_dispatch:
 
 jobs:
@@ -15,8 +16,5 @@ jobs:
       with:
         workflow_conclusion: success
         workflow: RUST_RELEASE.yml
-        path: packages/sql-parser/dist
+        path: packages/sql-parser
     - run: ls packages/sql-parser/dist
-    - run: 7z x packages/sql-parser/dist/binary_bin_with_cross_platform.zip
-    - run: ls packages/sql-parser/dist
-    - run: rm -f packages/sql-parser/dist/binary_bin_with_cross_platform.zip
