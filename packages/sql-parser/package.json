@@ -4,9 +4,10 @@
   "description": "A SQL parser build with Rust",
   "main": "index.node",
   "scripts": {
+    "postinstall": "npm run build-test",
     "build-debug": "npm run build --",
     "build": "node ./scripts/build.js",
-    "test": "cargo test"
+    "build-test": "cargo-cp-artifact -nc dist/index.node -- cargo build --message-format=json-render-diagnostics"
   },
   "author": "southorange1228",
   "license": "MIT",
