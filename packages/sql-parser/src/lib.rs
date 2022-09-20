@@ -11,7 +11,8 @@ fn parser(mut cx: FunctionContext) -> JsResult<JsString> {
     let ast = Parser::parse_sql(&dialect, &sql);
 
     let result;
-
+    // simple method to convert object 
+    // https://github.com/neon-bindings/neon/issues/926
     match ast {
         Ok(statement) => {
             result = serde_json::to_string_pretty(&statement).unwrap();

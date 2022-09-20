@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "A SQL parser build with Rust",
   "main": "index.node",
+  "types": "./types/index.d.ts",
   "scripts": {
     "postinstall": "npm run build-test",
     "build-debug": "npm run build --",
