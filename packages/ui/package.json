@@ -13,7 +13,7 @@
     "eslint": "^7.32.0",
     "eslint-config-custom": "workspace:*",
     "react": "^17.0.2",
-    "@juzi/tsconfig": "workspace:*",
+    "@qinglian/tsconfig": "workspace:*",
     "typescript": "^4.5.2"
   }
 }

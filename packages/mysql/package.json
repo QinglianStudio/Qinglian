@@ -1,5 +1,5 @@
 {
-  "name": "@juzi/mysql",
+  "name": "@qinglian/mysql",
   "version": "0.0.0",
   "description": "A mysql tool Powered by mysql2 and typeorm",
   "main": "lib/index.js",
@@ -8,7 +8,7 @@
   },
   "keywords": [
     "mysql",
-    "juzi"
+    "qinglian"
   ],
   "author": "southorange1228",
   "license": "MIT",

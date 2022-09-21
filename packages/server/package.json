@@ -1,5 +1,5 @@
 {
-  "name": "@juzi/server",
+  "name": "@qinglian/server",
   "version": "0.0.0",
   "description": "A node server Powered with Koa and Typescript",
   "main": "index.ts",

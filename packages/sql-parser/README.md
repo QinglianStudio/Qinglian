@@ -1,10 +1,10 @@
-### @juzi/sql-parser
+### @qinglian/sql-parser
 
 基于Rust实现的SQL Parser工具。
 
 #### example
 ```js
-const { parser } = require("@juzi/sql-parser");
+const { parser } = require("@qinglian/sql-parser");
 
 const MockSQL = `
 create table room_user

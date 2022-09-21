@@ -7,8 +7,8 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build --no-cache --filter=!@juzi/sql-parser",
-    "build-rs": "turbo run build --no-cache --filter=@juzi/sql-parser",
+    "build": "turbo run build --no-cache --filter=!@qinglian/sql-parser",
+    "build-rs": "turbo run build --no-cache --filter=@qinglian/sql-parser",
     "dev": "turbo run dev --parallel --no-cache",
     "lint": "turbo run lint",
     "test": "turbo run test && npm run test:all",
@@ -19,7 +19,7 @@
     "init": "tsx --tsconfig ./tsconfig.json ./scripts/init-package.ts"
   },
   "devDependencies": {
-    "@juzi/tsconfig": "workspace:^0.0.0",
+    "@qinglian/tsconfig": "workspace:^0.0.0",
     "@swc-node/jest": "^1.5.2",
     "@types/jest": "^29.0.3",
     "@types/node": "^18.7.18",
@@ -28,7 +28,6 @@
     "jest": "^29.0.3",
     "jest-environment-jsdom": "^29.0.3",
     "jest-extended": "^3.1.0",
-    "pnpm": "^7.11.0",
     "prettier": "latest",
     "tsx": "^3.9.0",
     "turbo": "latest",

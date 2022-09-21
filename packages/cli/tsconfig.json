@@ -1,5 +1,5 @@
 {
-  "extends": "@juzi/tsconfig/node.json",
+  "extends": "@qinglian/tsconfig/node.json",
   "compilerOptions": {
     "outDir": "./lib"
   },

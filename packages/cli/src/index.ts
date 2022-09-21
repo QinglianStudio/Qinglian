@@ -14,7 +14,7 @@ const program = new Command();
 export const run = async () => {
   program.name("jz").description("🪶 Node Cli for Ranger").version(cliVersion);
 
-  program.command("update").description("Check '@juzi/*' package's version");
+  program.command("update").description("Check '@qinglian/*' package's version");
 
   program
     .command("release")

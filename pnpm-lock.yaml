@@ -4,7 +4,7 @@ importers:
 
   .:
     specifiers:
-      '@juzi/tsconfig': workspace:^0.0.0
+      '@qinglian/tsconfig': workspace:^0.0.0
       '@swc-node/jest': ^1.5.2
       '@types/jest': ^29.0.3
       '@types/node': ^18.7.18
@@ -13,13 +13,12 @@ importers:
       jest: ^29.0.3
       jest-environment-jsdom: ^29.0.3
       jest-extended: ^3.1.0
-      pnpm: ^7.11.0
       prettier: latest
       tsx: ^3.9.0
       turbo: latest
       typescript: ^4.8.3
     devDependencies:
-      '@juzi/tsconfig': link:packages/tsconfig
+      '@qinglian/tsconfig': link:packages/tsconfig
       '@swc-node/jest': mirrors.tencent.com/@swc-node/jest/1.5.2_typescript@4.8.3
       '@types/jest': mirrors.tencent.com/@types/jest/29.0.3
       '@types/node': mirrors.tencent.com/@types/node/18.7.18
@@ -28,7 +27,6 @@ importers:
       jest: mirrors.tencent.com/jest/29.0.3_@types+node@18.7.18
       jest-environment-jsdom: mirrors.tencent.com/jest-environment-jsdom/29.0.3
       jest-extended: mirrors.tencent.com/jest-extended/3.1.0_jest@29.0.3
-      pnpm: mirrors.tencent.com/pnpm/7.11.0
       prettier: mirrors.tencent.com/prettier/2.7.1
       tsx: mirrors.tencent.com/tsx/3.9.0
       turbo: mirrors.tencent.com/turbo/1.4.7
@@ -36,7 +34,7 @@ importers:
 
   packages/cli:
     specifiers:
-      '@juzi/tsconfig': workspace:0.0.0
+      '@qinglian/tsconfig': workspace:0.0.0
       chalk: ^5.0.1
       commander: ^9.4.0
       execa: ^5.1.1
@@ -46,7 +44,7 @@ importers:
       tslib: ^2.4.0
       tsx: ^3.9.0
     dependencies:
-      '@juzi/tsconfig': link:../tsconfig
+      '@qinglian/tsconfig': link:../tsconfig
       chalk: mirrors.tencent.com/chalk/5.0.1
       commander: mirrors.tencent.com/commander/9.4.0
       execa: mirrors.tencent.com/execa/5.1.1
@@ -104,7 +102,7 @@ importers:
 
   packages/ui:
     specifiers:
-      '@juzi/tsconfig': workspace:*
+      '@qinglian/tsconfig': workspace:*
       '@types/react': ^17.0.37
       '@types/react-dom': ^17.0.11
       eslint: ^7.32.0
@@ -112,7 +110,7 @@ importers:
       react: ^17.0.2
       typescript: ^4.5.2
     devDependencies:
-      '@juzi/tsconfig': link:../tsconfig
+      '@qinglian/tsconfig': link:../tsconfig
       '@types/react': mirrors.tencent.com/@types/react/17.0.50
       '@types/react-dom': mirrors.tencent.com/@types/react-dom/17.0.17
       eslint: mirrors.tencent.com/eslint/7.32.0
@@ -5629,14 +5627,6 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       find-up: mirrors.tencent.com/find-up/4.1.0
-    dev: true
-
-  mirrors.tencent.com/pnpm/7.11.0:
-    resolution: {integrity: sha512-cxh4TfCE8L4ZbLBN72kTGKTYP7X08nrIzoQ2rQCKihAcIHAdNIgsk4bEJyE1xHjE+bNJt9skwr7aJv3LpvUawQ==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/pnpm/-/pnpm-7.11.0.tgz}
-    name: pnpm
-    version: 7.11.0
-    engines: {node: '>=14.6'}
-    hasBin: true
     dev: true
 
   mirrors.tencent.com/prelude-ls/1.1.2:
