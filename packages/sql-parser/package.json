@@ -2,7 +2,7 @@
   "name": "@juzi/sql-parser",
   "version": "0.0.1",
   "description": "A SQL parser build with Rust",
-  "main": "index.node",
+  "main": "./bins/index,js",
   "types": "./types/index.d.ts",
   "scripts": {
     "postinstall": "npm run build-test",
@@ -14,5 +14,10 @@
   "license": "MIT",
   "devDependencies": {
     "cargo-cp-artifact": "^0.1.6"
-  }
+  },
+  "files": [
+    "bins",
+    "types",
+    "package.json"
+  ]
 }
