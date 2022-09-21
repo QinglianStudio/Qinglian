@@ -1,6 +1,6 @@
 {
   "name": "@juzi/sql-parser",
-  "version": "0.0.1",
+  "version": "0.0.2-beta.0",
   "description": "A SQL parser build with Rust",
   "main": "./bins/index,js",
   "types": "./types/index.d.ts",
@@ -14,6 +14,10 @@
   "license": "MIT",
   "devDependencies": {
     "cargo-cp-artifact": "^0.1.6"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "files": [
     "bins",
