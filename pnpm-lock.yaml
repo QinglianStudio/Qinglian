@@ -14,6 +14,7 @@ importers:
       jest-environment-jsdom: ^29.0.3
       jest-extended: ^3.1.0
       prettier: latest
+      rimraf: ^3.0.2
       tsx: ^3.9.0
       turbo: latest
       typescript: ^4.8.3
@@ -28,6 +29,7 @@ importers:
       jest-environment-jsdom: mirrors.tencent.com/jest-environment-jsdom/29.0.3
       jest-extended: mirrors.tencent.com/jest-extended/3.1.0_jest@29.0.3
       prettier: mirrors.tencent.com/prettier/2.7.1
+      rimraf: mirrors.tencent.com/rimraf/3.0.2
       tsx: mirrors.tencent.com/tsx/3.9.0
       turbo: mirrors.tencent.com/turbo/1.4.7
       typescript: mirrors.tencent.com/typescript/4.8.3
