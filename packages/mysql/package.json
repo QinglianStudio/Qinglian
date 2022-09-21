@@ -1,6 +1,6 @@
 {
   "name": "@qinglian/mysql",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A mysql tool Powered by mysql2 and typeorm",
   "main": "lib/index.js",
   "scripts": {
