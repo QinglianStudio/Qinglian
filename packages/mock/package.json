@@ -1,0 +1,14 @@
+{
+  "name": "@qinglian/mock",
+  "version": "0.0.0",
+  "description": "A real data mock tool",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "mock"
+  ],
+  "author": "southorange1228",
+  "license": "MIT"
+}
