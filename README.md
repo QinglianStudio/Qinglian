@@ -26,6 +26,6 @@
 
 #### 常见命令
 
-- 单元测试 `npm run dev`
+- 单元测试 `npm run test`
 - 新增子包 `npm run init <package-name>`
 - 构建    `npm run build`
