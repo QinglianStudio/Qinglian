@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "description": "A cli tool for Ranger",
   "bin": {
-    "jz": "./bin/index.js",
-    "jz-client": "./bin/client.js",
-    "jz-server": "./bin/server.js"
+    "ql": "./bin/index.js",
+    "ql-client": "./bin/client.js",
+    "ql-server": "./bin/server.js"
   },
   "scripts": {
     "build": "tsc"
