@@ -1,0 +1,21 @@
+{
+  "name": "@qinglian/react-template",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ql client start"
+  },
+  "author": "southorange1228",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@qinglian/cli": "workspace:^0.0.0"
+  },
+  "engines": {
+    "node": ">16.0.0"
+  }
+}

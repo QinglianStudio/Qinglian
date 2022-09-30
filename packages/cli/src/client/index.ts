@@ -1,5 +1,7 @@
 import color from "colors";
+import { dev } from "./server";
 
+// https://github.com/vitejs/vite/issues/9113
 export const client = async (mode) => {
   const commanders = ["start", "build"];
   if (!mode || !commanders.includes(mode)) {
@@ -10,4 +12,5 @@ export const client = async (mode) => {
     );
     process.exit(1);
   }
+  mode === 'start' && dev();
 };
