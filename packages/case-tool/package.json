@@ -1,0 +1,18 @@
+{
+  "name": "@qinglian/case-tool",
+  "version": "0.0.0",
+  "description": "a tool used to validate name case & translate",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "name-case",
+    "validate"
+  ],
+  "author": "southorange1228",
+  "license": "MIT",
+  "dependencies": {
+    "tslib": "^2.4.0"
+  }
+}
