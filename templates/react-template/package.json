@@ -1,19 +1,24 @@
 {
   "name": "@qinglian/react-template",
   "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A react template with redux",
   "scripts": {
-    "dev": "ql client start"
+    "dev": "ql client start",
+    "build": "sql client build"
   },
   "author": "southorange1228",
   "license": "MIT",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.1",
+    "redux": "^4.2.0"
   },
   "devDependencies": {
-    "@qinglian/cli": "workspace:^0.0.0"
+    "@qinglian/cli": "workspace:^0.0.0",
+    "@types/react": "^17.0.50",
+    "@types/react-dom": "^17.0.17"
   },
   "engines": {
     "node": ">16.0.0"
