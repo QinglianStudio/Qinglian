@@ -4,7 +4,7 @@
   "description": "A react template with redux",
   "scripts": {
     "dev": "ql client start",
-    "dist": "sql client build"
+    "build": "ql client build"
   },
   "author": "southorange1228",
   "license": "MIT",
