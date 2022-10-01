@@ -16,7 +16,7 @@
     "react-router-dom": "^6.4.1"
   },
   "devDependencies": {
-    "@qinglian/cli": "workspace:^0.0.0",
+    "@qinglian/cli": "workspace:^0.0.1",
     "@types/react": "^17.0.50",
     "@types/react-dom": "^17.0.17"
   },
