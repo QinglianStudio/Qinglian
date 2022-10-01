@@ -1,15 +1,12 @@
 {
   "$schema": "https://turborepo.org/schema.json",
   "pipeline": {
-    "build-test": {},
-    "build": {
-      "dependsOn": ["^build"]
-    },
+    "build": {},
     "lint": {
       "outputs": []
     },
     "test": {
-      "dependsOn": ["build-test"],
+      "dependsOn": ["@qinglian/sql-parser#build-test"],
       "cache": false
     },
     "dev": {

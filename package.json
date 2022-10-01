@@ -10,6 +10,7 @@
     "preinstall": "npx only-allow pnpm",
     "build": "turbo run build --no-cache --filter=!@qinglian/sql-parser",
     "build-rs": "turbo run build --no-cache --filter=@qinglian/sql-parser",
+    "build-template": "turbo run build-template",
     "dev": "turbo run dev --parallel --no-cache",
     "lint": "turbo run lint",
     "test": "turbo run test && npm run test:all",
