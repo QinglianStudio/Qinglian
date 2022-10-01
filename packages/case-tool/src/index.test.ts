@@ -1,4 +1,12 @@
-import { isCamelCase, isKebabCase, isPascalCase, isSnakeCase } from ".";
+import {
+  camelToPascal,
+  isCamelCase,
+  isKebabCase,
+  isPascalCase,
+  isSnakeCase,
+  kebabToPascal,
+  snakeToPascal,
+} from ".";
 
 describe("Name case tool Test", () => {
   it("snake-case", () => {
@@ -31,5 +39,20 @@ describe("Name case tool Test", () => {
 
     const isPascalCaseResult = isPascalCase("AbcDef");
     expect(isPascalCaseResult).toBeTruthy();
+  });
+
+  it("snakeToPascal test", () => {
+    const result = snakeToPascal("user_name");
+    expect(result).toBe("UserName");
+  });
+
+  it("kebabToPascal test", () => {
+    const result = kebabToPascal("user-name");
+    expect(result).toBe("UserName");
+  });
+
+  it("camelToPascal test", () => {
+    const result = camelToPascal("userName");
+    expect(result).toBe("UserName");
   });
 });

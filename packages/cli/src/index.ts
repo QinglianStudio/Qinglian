@@ -4,6 +4,7 @@ import { join } from "path";
 import { release } from "./release";
 import { client } from "./client";
 import { server } from "./server";
+import { sqlGen } from "./sql-gen";
 
 const packageFile = join(__dirname, "../package.json");
 
@@ -35,6 +36,13 @@ export const run = async () => {
     .command("server <mode>")
     .description("sub commander for server")
     .action(server);
+
+  program
+    .command("sql-gen")
+    .description("use sql file to generate typescript interface")
+    .option('-p, --path <path>','sql file path and generate interface file will related this path')
+    .option('-n, --name <name>','generate interface file name,default is mode')
+    .action(sqlGen);
 
   program.parse(process.argv);
 };

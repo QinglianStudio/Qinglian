@@ -44,6 +44,8 @@ importers:
 
   packages/cli:
     specifiers:
+      '@qinglian/case-tool': workspace:^0.0.0
+      '@qinglian/sql-parser': workspace:0.0.2-beta.0
       '@qinglian/tsconfig': workspace:0.0.0
       '@vitejs/plugin-react': ^2.1.0
       chalk: ^5.0.1
@@ -57,6 +59,8 @@ importers:
       tsx: ^3.9.0
       vite: ^3.1.4
     dependencies:
+      '@qinglian/case-tool': link:../case-tool
+      '@qinglian/sql-parser': link:../sql-parser
       '@qinglian/tsconfig': link:../tsconfig
       '@vitejs/plugin-react': 2.1.0_vite@3.1.4
       chalk: mirrors.tencent.com/chalk/5.0.1

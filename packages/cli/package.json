@@ -11,6 +11,8 @@
   "author": "southorange1228",
   "license": "MIT",
   "dependencies": {
+    "@qinglian/case-tool": "workspace:^0.0.0",
+    "@qinglian/sql-parser": "workspace:0.0.2-beta.0",
     "@qinglian/tsconfig": "workspace:0.0.0",
     "@vitejs/plugin-react": "^2.1.0",
     "chalk": "^5.0.1",
