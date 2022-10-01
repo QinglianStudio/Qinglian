@@ -18,7 +18,7 @@
     "test:coverage": "cross-env NODE_OPTIONS=--max_old_space_size=4096 jest --runInBand --detectOpenHandles --collectCoverage",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "init": "tsx --tsconfig ./tsconfig.json ./scripts/init-package.ts",
-    "prerelease": "pnpm changeset pre enter beta",
+    "prerelease:beta": "pnpm changeset pre enter beta",
     "prerelease:exit": "pnpm changeset pre exit",
     "changeset": "changeset",
     "version-packages": "changeset version",
