@@ -5,13 +5,13 @@ importers:
   .:
     specifiers:
       '@changesets/cli': ^2.24.4
-      '@qinglian/tsconfig': workspace:^0.0.0
+      '@qinglian/tsconfig': workspace:*
       '@swc-node/jest': ^1.5.2
       '@swc/core': ^1.3.4
       '@types/jest': ^29.0.3
       '@types/node': ^18.7.18
       cross-env: ^7.0.3
-      eslint-config-custom: workspace:0.0.0
+      eslint-config-custom: workspace:*
       jest: ^29.0.3
       jest-environment-jsdom: ^29.0.3
       jest-extended: ^3.1.0
@@ -46,9 +46,9 @@ importers:
 
   packages/cli:
     specifiers:
-      '@qinglian/case-tool': workspace:^0.0.0
+      '@qinglian/case-tool': workspace:^0.0.1
       '@qinglian/sql-parser': workspace:0.0.2-beta.0
-      '@qinglian/tsconfig': workspace:0.0.0
+      '@qinglian/tsconfig': workspace:0.0.1
       '@vitejs/plugin-react': ^2.1.0
       chalk: ^5.0.1
       colors: ^1.4.0
@@ -145,7 +145,7 @@ importers:
 
   templates/react-template:
     specifiers:
-      '@qinglian/cli': workspace:^0.0.0
+      '@qinglian/cli': workspace:^0.0.2
       '@reduxjs/toolkit': ^1.8.5
       '@types/react': ^17.0.50
       '@types/react-dom': ^17.0.17
