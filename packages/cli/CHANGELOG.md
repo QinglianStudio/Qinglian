@@ -1,5 +1,12 @@
 # @qinglian/cli
 
+## 0.0.3
+
+### Patch Changes
+
+- Updated dependencies
+  - @qinglian/tsconfig@0.0.2
+
 ## 0.0.2
 
 ### Patch Changes
