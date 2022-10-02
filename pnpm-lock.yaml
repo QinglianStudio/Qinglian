@@ -146,6 +146,7 @@ importers:
   templates/react-template:
     specifiers:
       '@qinglian/cli': workspace:^0.0.2
+      '@qinglian/tsconfig': workspace:^0.0.1
       '@reduxjs/toolkit': ^1.8.5
       '@types/react': ^17.0.50
       '@types/react-dom': ^17.0.17
@@ -161,6 +162,7 @@ importers:
       react-router-dom: 6.4.1_biqbaboplfbrettd7655fr4n2y
     devDependencies:
       '@qinglian/cli': link:../../packages/cli
+      '@qinglian/tsconfig': link:../../packages/tsconfig
       '@types/react': 17.0.50
       '@types/react-dom': 17.0.17
 
