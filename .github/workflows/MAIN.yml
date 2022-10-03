@@ -33,11 +33,10 @@ jobs:
       with:
         paths_filter: |
           rust:
-            paths:
-              - ["packages/sql-parser/**/*"]
+            paths: '["packages/sql-parser/**"]'
             backtracking: 0
 
   call-rust-workflow:
     needs: build
-    if: ${{ fromJSON(needs.build.outputs.paths_result).rust.should_skip }}
+    if: ${{ !fromJSON(needs.build.outputs.paths_result).rust.should_skip }}
     uses: ./.github/workflows/RUST_BUILD.yml
