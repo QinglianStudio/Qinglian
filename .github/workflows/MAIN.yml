@@ -20,6 +20,7 @@ jobs:
             rust:
               paths:
                 - '**/*.rs'
+              backtracking: 1
 
   build:
     needs: pre-job
@@ -43,5 +44,5 @@ jobs:
 
   call-rust-workflow:
     needs: build
-    if: needs.pre_job.outputs.should_skip != 'true' || !fromJSON(needs.pre_job.outputs.paths_result).rust.should_skip
+    if: !fromJSON(needs.pre_job.outputs.paths_result).rust.should_skip
     uses: ./.github/workflows/RUST_BUILD.yml
