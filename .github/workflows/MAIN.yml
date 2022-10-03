@@ -29,13 +29,13 @@ jobs:
     - name: Build
       run: pnpm build
     - id: skip_check
-        uses: fkirc/skip-duplicate-actions@v5
-        with:
-          paths_filter: |
-            rust:
-              paths:
-                - ["packages/sql-parser/**/*"]
-              backtracking: 0
+      uses: fkirc/skip-duplicate-actions@v5
+      with:
+        paths_filter: |
+          rust:
+            paths:
+              - ["packages/sql-parser/**/*"]
+            backtracking: 0
 
   call-rust-workflow:
     needs: build
