@@ -5,7 +5,6 @@
   "main": "./bins/index,js",
   "types": "./types/index.d.ts",
   "scripts": {
-    "build-debug": "npm run build --",
     "build": "node ./scripts/build.js",
     "build-test": "cargo-cp-artifact -nc dist/index.node -- cargo build --message-format=json-render-diagnostics"
   },
