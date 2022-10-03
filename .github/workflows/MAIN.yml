@@ -39,5 +39,5 @@ jobs:
 
   call-rust-workflow:
     needs: build
-    if: ${{ !fromJSON(needs.pre_job.outputs.paths_result).rust.should_skip }}
+    if: ${{ !fromJSON(needs.build.outputs.paths_result).rust.should_skip }}
     uses: ./.github/workflows/RUST_BUILD.yml
