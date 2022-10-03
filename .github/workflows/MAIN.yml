@@ -33,7 +33,7 @@ jobs:
       with:
         paths_filter: |
           rust:
-            paths:
+            paths-ignore:
               - ["packages/sql-parser/**/*"]
             backtracking: 0
 
