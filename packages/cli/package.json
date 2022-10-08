@@ -1,6 +1,6 @@
 {
   "name": "@qinglian/cli",
-  "version": "0.0.3",
+  "version": "0.0.1",
   "description": "A cli tool for Ranger",
   "bin": {
     "ql": "./bin/index.js"
@@ -11,8 +11,8 @@
   "author": "southorange1228",
   "license": "MIT",
   "dependencies": {
-    "@qinglian/case-tool": "workspace:^0.0.1",
-    "@qinglian/sql-parser": "workspace:0.0.2-beta.0",
+    "@qinglian/case-tool": "workspace:*",
+    "@qinglian/sql-parser": "workspace:*",
     "@qinglian/tsconfig": "workspace:*",
     "@vitejs/plugin-react": "^2.1.0",
     "chalk": "^5.0.1",
