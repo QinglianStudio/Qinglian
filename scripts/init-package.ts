@@ -2,7 +2,7 @@ import { mkdirSync, existsSync } from "fs";
 import { join } from "path";
 import { execSync } from "child_process";
 
-const PackageNameReg = /^((([A-Za-z]+)-?)+(?<!-)$/;
+const PackageNameReg = /^(([A-Za-z]+)-?)+(?<!-)$/;
 
 const init = async () => {
   const args = process.argv;
