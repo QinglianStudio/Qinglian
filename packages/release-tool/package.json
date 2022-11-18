@@ -1,0 +1,21 @@
+{
+  "name": "@qinglian/release-tool",
+  "version": "0.0.0",
+  "description": "a release tool",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "release"
+  ],
+  "author": "southorange",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "4",
+    "enquirer": "^2.3.6",
+    "glob": "^8.0.3",
+    "inquirer": "^8.0.0",
+    "tslib": "^2.4.0"
+  }
+}
