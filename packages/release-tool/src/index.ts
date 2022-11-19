@@ -10,7 +10,7 @@ export const release = async () => {
   const answer = {} as Answer;
   const workspace = await resolvePackages();
   if (workspace) {
-    answer.packages = await selectPackages(workspace).run();
+    answer.packages = await selectPackages(workspace);
   }
   answer.version = await selectVersion();
 };

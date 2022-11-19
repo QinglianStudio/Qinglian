@@ -13,9 +13,11 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "4",
-    "enquirer": "^2.3.6",
     "glob": "^8.0.3",
     "inquirer": "^8.0.0",
     "tslib": "^2.4.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^8"
   }
 }
