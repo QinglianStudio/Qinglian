@@ -4,7 +4,7 @@ import { dev } from "./server";
 // https://github.com/vitejs/vite/issues/9113
 export const client = async (mode) => {
   const commanders = ["start", "build"];
-  if (!mode || !commanders.includes(mode)) {
+  if (!(mode && commanders.includes(mode))) {
     console.log(
       `☢ client only support ${color.red(
         commanders.join("\t")

@@ -7,12 +7,14 @@
     "packages/*"
   ],
   "scripts": {
+    "prepare": "husky install",
     "preinstall": "npx only-allow pnpm",
     "build": "turbo run build --no-cache --filter=!@qinglian/sql-parser",
     "build-rs": "turbo run build --no-cache --filter=@qinglian/sql-parser",
     "build-template": "turbo run build-template",
     "dev": "turbo run dev --parallel --no-cache",
-    "lint": "turbo run lint",
+    "lint": "rome check packages --apply",
+    "lint-staged": "lint-staged",
     "test": "turbo run test && npm run test:all",
     "clean": "rimraf '{packages,templates}/*/{lib,node_modules,dist,target}' && rimraf node_modules",
     "test:all": "cross-env NODE_OPTIONS=--max_old_space_size=4096 jest --runInBand --detectOpenHandles",
@@ -34,11 +36,14 @@
     "@types/node": "^18.7.18",
     "cross-env": "^7.0.3",
     "eslint-config-custom": "workspace:*",
+    "husky": "^8.0.2",
     "jest": "^29.0.3",
     "jest-environment-jsdom": "^29.0.3",
     "jest-extended": "^3.1.0",
+    "lint-staged": "^13.0.3",
     "prettier": "latest",
     "rimraf": "^3.0.2",
+    "rome": "^10.0.1",
     "tsx": "^3.9.0",
     "turbo": "latest",
     "typescript": "^4.8.3"
@@ -46,6 +51,9 @@
   "engines": {
     "npm": ">=7.0.0",
     "node": ">=14.0.0"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": "pnpm lint"
   },
   "packageManager": "pnpm@7.8.0"
 }

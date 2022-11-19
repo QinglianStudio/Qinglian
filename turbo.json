@@ -5,9 +5,6 @@
     "build": {
       "dependsOn": ["^build"]
     },
-    "lint": {
-      "outputs": []
-    },
     "test": {
       "dependsOn": ["build-test"],
       "cache": false

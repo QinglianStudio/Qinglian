@@ -6,7 +6,7 @@ import axios from "axios";
  * @param data
  * @returns
  */
-export const collectionData = async (data: Array<Array<any>>) => {
+export const collectionData = async (data: any[][]) => {
   const instance = axios.create({
     baseURL: "http://127.0.0.1:4005/cgi/api",
   });
