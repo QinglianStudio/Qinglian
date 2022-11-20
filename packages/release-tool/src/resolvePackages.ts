@@ -3,8 +3,10 @@ import path from "path";
 import process from "process";
 import * as glob from "glob";
 import { isWorkspaces } from "./workspace";
+import { GenNonDuplicateID } from "./utils";
 
 export interface WorkspaceInfo {
+  id: string
   /**
    * package名称
    */
@@ -13,6 +15,10 @@ export interface WorkspaceInfo {
    * 所属workspace父级目录
    */
   workspace: string;
+  /**
+   * package路径
+   */
+  packagePath: string;
 }
 
 export const resolvePackages = async (): Promise<WorkspaceInfo[] | false> => {
@@ -30,6 +36,8 @@ export const resolvePackages = async (): Promise<WorkspaceInfo[] | false> => {
           packages.push({
             packageName: path.basename(item),
             workspace: path.basename(parentPath),
+            packagePath: item,
+            id: GenNonDuplicateID()
           });
         }
       });
