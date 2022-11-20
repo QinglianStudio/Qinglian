@@ -1,6 +1,6 @@
 {
   "name": "@qinglian/release-tool",
-  "version": "0.0.0",
+  "version": "0.0.1-beta.0",
   "description": "a release tool",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -20,5 +20,8 @@
   },
   "devDependencies": {
     "@types/inquirer": "^8"
-  }
+  },
+  "files": [
+    "lib"
+  ]
 }
