@@ -1,6 +1,7 @@
 import { selectPackages, selectVersion } from "./prompts";
 import { resolvePackages, WorkspaceInfo } from "./resolvePackages";
 import { releaseNpmPackageVersion } from "./release";
+import { resolveSinglePackage } from "./resolveSinglePackage";
 
 interface Answer {
   packages?: WorkspaceInfo[];
@@ -12,6 +13,8 @@ export const release = async () => {
   const workspace = await resolvePackages();
   if (workspace) {
     answer.packages = await selectPackages(workspace);
+  } else {
+    answer.packages = [resolveSinglePackage()];
   }
   answer.version = await selectVersion();
   await releaseNpmPackageVersion(answer.packages, answer.version);

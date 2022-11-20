@@ -1,6 +1,5 @@
 {
-  "name": "so",
-  "version": "0.0.2-beta.1",
+  "name": "qinglian",
   "private": true,
   "workspaces": [
     "templates/*",
