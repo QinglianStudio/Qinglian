@@ -22,7 +22,7 @@ const runRelease = async (info: WorkspaceInfo, version: string) => {
         if (err || stderr) {
           console.log(
             `${chalk.blue(info.packageName)} publish failed: ${
-              err.message || stderr.toString()
+              err?.message || (stderr || "").toString()
             }`
           );
           s(false);
