@@ -15,6 +15,9 @@ const runRelease = async (info: WorkspaceInfo, version: string) => {
   return await new Promise((s) => {
     ChildProcess.exec(
       `${npmVersionCommander} && npm publish --access public`,
+      {
+        cwd: info.packagePath,
+      },
       (err, stdout, stderr) => {
         if (err || stderr) {
           console.log(
