@@ -20,7 +20,7 @@
     "test:all": "cross-env NODE_OPTIONS=--max_old_space_size=4096 jest --runInBand --detectOpenHandles",
     "test:coverage": "cross-env NODE_OPTIONS=--max_old_space_size=4096 jest --runInBand --detectOpenHandles --collectCoverage",
     "init": "tsx --tsconfig ./tsconfig.json ./scripts/init-package.ts",
-    "deploy": "tsx --tsconfig ./tsconfig.json ./scripts/release.ts"
+    "release": "tsx --tsconfig ./tsconfig.json ./scripts/release.ts"
   },
   "devDependencies": {
     "@qinglian/release-tool": "workspace:*",
