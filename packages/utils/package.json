@@ -1,6 +1,6 @@
 {
   "name": "@qinglian/utils",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "utils for project",
   "main": "lib/index.js",
   "scripts": {
