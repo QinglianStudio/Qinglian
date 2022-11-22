@@ -1,15 +1,14 @@
-import chalk from "chalk";
+import { Log } from "@qinglian/utils";
 import path from "path";
 import fs from "fs";
 import { isFileExist } from "./utils";
+import { green } from "ansi-colors";
 
 export const isWorkspaces = (rootPath: string): string[] | false => {
   const rootPackageJsonFilePath = path.join(rootPath, "./package.json");
 
   if (!isFileExist(rootPackageJsonFilePath)) {
-    console.log(
-      `\n ❌ ${chalk.red(`${rootPackageJsonFilePath}文件不存在 \n`)}`
-    );
+    Log.error(`${rootPackageJsonFilePath}文件不存在`);
     process.exit(-1);
   }
 
@@ -20,16 +19,12 @@ export const isWorkspaces = (rootPath: string): string[] | false => {
   const workspaces = packageContent.workspaces;
 
   if (workspaces) {
-    console.log(
-      chalk.green(
-        "\n当前存在workspaces，将采用workspaces模式默认加载解析packages\n"
-      )
+    Log.info(
+      green("当前存在workspaces，将采用workspaces模式默认加载解析packages")
     );
     return workspaces;
   } else {
-    console.log(
-      chalk.green("\n当前未配置workspaces，跳过workspaces模式只发布当前包\n")
-    );
+    Log.info(green("当前未配置workspaces，跳过workspaces模式只发布当前包"));
     return false;
   }
 };

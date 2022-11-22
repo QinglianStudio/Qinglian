@@ -1,4 +1,5 @@
-import chalk from "chalk";
+import { Log } from "@qinglian/utils";
+import { blue } from "ansi-colors";
 import inquirer from "inquirer";
 import { WorkspaceInfo } from "../resolvePackages";
 
@@ -16,9 +17,7 @@ export const selectPackages = async (
   const choices = Object.keys(workspacePackages)
     .sort()
     .reduce((t, i) => {
-      t.push(
-        new inquirer.Separator(`${chalk.blue(i)} workspace packages list`)
-      );
+      t.push(new inquirer.Separator(`${blue(i)} workspace packages list`));
       t.push(
         ...workspacePackages[i].map((p) => {
           return {
@@ -41,7 +40,7 @@ export const selectPackages = async (
     },
   ]);
   if (!selectedPackages?.packages?.length) {
-    console.log(chalk.red("\n未选择任何发布包，退出流程\n"));
+    Log.error("未选择任何发布包，退出流程");
     process.exit(-1);
   }
   return packages.filter((i) => selectedPackages.packages.includes(i.id));

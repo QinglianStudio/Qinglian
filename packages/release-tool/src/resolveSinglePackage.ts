@@ -1,4 +1,4 @@
-import chalk from "chalk";
+import { Log } from "@qinglian/utils";
 import path from "path";
 import fs from "fs";
 import { GenNonDuplicateID, isFileExist } from "./utils";
@@ -9,9 +9,7 @@ export const resolveSinglePackage = (): WorkspaceInfo => {
   const rootPackageJsonFilePath = path.join(rootPath, "./package.json");
 
   if (!isFileExist(rootPackageJsonFilePath)) {
-    console.log(
-      `\n ❌ ${chalk.red(`${rootPackageJsonFilePath}文件不存在 \n`)}`
-    );
+    Log.error(`${rootPackageJsonFilePath}文件不存在`);
     process.exit(-1);
   }
   const packageContent = JSON.parse(

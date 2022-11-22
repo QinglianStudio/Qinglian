@@ -1,4 +1,5 @@
-import chalk from "chalk";
+import { Log } from "@qinglian/utils";
+import { blue } from "ansi-colors";
 import ChildProcess from "child_process";
 import { WorkspaceInfo } from "./resolvePackages";
 
@@ -20,12 +21,12 @@ const runRelease = async (info: WorkspaceInfo, version: string) => {
       },
       (err, stdout, stderr) => {
         if (err) {
-          console.log(
-            `${chalk.blue(info.packageName)} publish failed: ${err?.message}`
+          Log.error(
+            `${blue(info.packageName)} publish failed: ${err?.message}`
           );
           s(false);
         } else {
-          console.log(`${chalk.blue(info.packageName)} publish succeed.`);
+          Log.info(`${blue(info.packageName)} publish succeed.`);
           s(true);
         }
       }
