@@ -1,0 +1,26 @@
+{
+  "name": "@qinglian/utils",
+  "version": "0.0.0",
+  "description": "utils for project",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "util",
+    "qinglian"
+  ],
+  "author": "southorange1228",
+  "license": "MIT",
+  "devDependencies": {
+    "@qinglian/tsconfig": "workspace:*"
+  },
+  "dependencies": {
+    "ansi-colors": "^4.1.3",
+    "dayjs": "^1.11.6",
+    "tslib": "^2.4.0"
+  },
+  "files": [
+    "lib"
+  ]
+}

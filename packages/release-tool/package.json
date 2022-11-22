@@ -19,6 +19,7 @@
     "tslib": "^2.4.0"
   },
   "devDependencies": {
+    "@qinglian/tsconfig": "workspace:^0.0.2",
     "@types/inquirer": "^8"
   },
   "files": [
