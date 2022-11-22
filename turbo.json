@@ -6,7 +6,7 @@
       "dependsOn": ["^build"]
     },
     "test": {
-      "dependsOn": ["build-test"],
+      "dependsOn": ["^build", "build-test"],
       "cache": false
     },
     "dev": {

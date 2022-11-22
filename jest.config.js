@@ -23,7 +23,7 @@ module.exports = {
   moduleFileExtensions: ["js", "json", "jsx", "ts", "tsx", "node"],
   setupFilesAfterEnv: ["jest-extended", "./test/setup-framework.js"],
   preset: "@swc-node/jest",
-  testPathIgnorePatterns: ["examples", "fixtures", "demo", "style"],
+  testPathIgnorePatterns: ["examples", "fixtures", "demo", "style", "lib", "dist"],
   testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
   transformIgnorePatterns: ["node_modules/(?!(?:.pnpm/)?)(?!(ora|uuid)/)"],
   globalSetup: "<rootDir>/setupTests.js",
