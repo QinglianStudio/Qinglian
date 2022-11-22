@@ -20,11 +20,11 @@ export const isWorkspaces = (rootPath: string): string[] | false => {
 
   if (workspaces) {
     Log.info(
-      green("当前存在workspaces，将采用workspaces模式默认加载解析packages")
+      green("当前存在workspaces，将采用workspaces模式默认加载解析packages\n")
     );
     return workspaces;
   } else {
-    Log.info(green("当前未配置workspaces，跳过workspaces模式只发布当前包"));
+    Log.info(green("当前未配置workspaces，跳过workspaces模式只发布当前包\n"));
     return false;
   }
 };
