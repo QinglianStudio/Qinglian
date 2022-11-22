@@ -26,7 +26,7 @@ const runRelease = async (info: WorkspaceInfo, version: string) => {
           );
           s(false);
         } else {
-          Log.info(`${blue(info.packageName)} publish succeed.`);
+          Log.success(`${blue(info.packageName)} publish succeed.`);
           s(true);
         }
       }
