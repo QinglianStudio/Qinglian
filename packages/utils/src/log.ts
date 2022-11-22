@@ -1,4 +1,4 @@
-import { blue, bold, red, yellow } from "ansi-colors";
+import { blue, bold, green, red, yellow } from "ansi-colors";
 import dayjs from "dayjs";
 import { SYMBOL } from "./symbol";
 
@@ -6,6 +6,7 @@ const LOG_LEVEL = {
   Info: blue,
   Warn: yellow,
   Error: red,
+  Success: green,
 };
 
 const buildLogFactory = (level: keyof typeof LOG_LEVEL) => {
@@ -26,6 +27,7 @@ const Log = {
   info: buildLogFactory("Info"),
   warn: buildLogFactory("Warn"),
   error: buildLogFactory("Error"),
+  success: buildLogFactory("Success"),
 };
 
 export { Log };
