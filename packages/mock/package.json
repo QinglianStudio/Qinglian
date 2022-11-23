@@ -1,8 +1,9 @@
 {
   "name": "@qinglian/mock",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A real data mock tool",
-  "main": "lib/index.js",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "scripts": {
     "build": "tsc"
   },
@@ -17,5 +18,8 @@
   },
   "devDependencies": {
     "axios-mock-adapter": "^1.21.2"
-  }
+  },
+  "files": [
+    "lib"
+  ]
 }
