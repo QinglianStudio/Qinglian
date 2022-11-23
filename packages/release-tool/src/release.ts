@@ -21,14 +21,14 @@ const runRelease = async (info: WorkspaceInfo, version: string) => {
       (err, stdout, stderr) => {
         if (err) {
           Log.error(
-            `${blue(info.packageName)}@${newVersion} publish failed: ${
+            `${blue(`${info.packageName}@${newVersion}`)} publish failed: ${
               err?.message
             }`
           );
           s(false);
         } else {
           Log.success(
-            `${blue(info.packageName)}@${newVersion} publish succeed.`
+            `${blue(`${info.packageName}@${newVersion}`)} publish succeed.`
           );
           s(true);
         }
