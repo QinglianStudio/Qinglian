@@ -1,6 +1,12 @@
-<div align='center'><font size="10"><strong>Qinglian(青莲)</strong></font></div>
+<div align='center'>
+  <font size="10">
+    <strong>Qinglian(青莲)</strong>
+  </font>
+</div>
 
-<div align='center'><font size="5">天上白玉京，十二楼五城</font></div>
+<div align='center'>
+  <font size="5">天上白玉京，十二楼五城</font>
+</div>
 
 <br />
 
@@ -15,12 +21,22 @@
 
 ### Packages
 
-- ##### @qinglian/case-tool
-- ##### @qinglian/cli
-- ##### @qinglian/mock
-- ##### @qinglian/mysql
-- ##### @qinglian/release-tool
-- ##### @qinglian/server
-- ##### @qinglian/sql-parser
-- ##### @qinglian/tsconfig
-- ##### @qinglian/utils
+##### @qinglian/case-tool
+
+##### @qinglian/cli
+
+##### @qinglian/mock
+
+##### @qinglian/mysql
+
+##### @qinglian/release-tool
+
+##### @qinglian/server
+
+##### @qinglian/sql-parser
+
+##### @qinglian/tsconfig
+
+##### @qinglian/utils
+
+### How to contribute
