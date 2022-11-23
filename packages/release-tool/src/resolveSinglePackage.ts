@@ -1,25 +1,19 @@
-import { Log } from "@qinglian/utils";
-import path from "path";
-import fs from "fs";
-import { GenNonDuplicateID, isFileExist } from "./utils";
+import { GenNonDuplicateID } from "./utils";
 import { WorkspaceInfo } from "./resolvePackages";
+import { resolvePackageName } from "./resolvePackageName";
+import { Log } from "@qinglian/utils";
 
 export const resolveSinglePackage = (): WorkspaceInfo => {
   const rootPath = process.cwd();
-  const rootPackageJsonFilePath = path.join(rootPath, "./package.json");
 
-  if (!isFileExist(rootPackageJsonFilePath)) {
-    Log.error(`${rootPackageJsonFilePath}文件不存在`);
+  const name = resolvePackageName(rootPath);
+  if (!name) {
+    Log.error("项目不存在package.json或者格式有误，无法进行发布操作.\n");
     process.exit(-1);
   }
-  const packageContent = JSON.parse(
-    fs.readFileSync(rootPackageJsonFilePath).toString()
-  );
-
-  const packageName = packageContent.name;
   return {
     id: GenNonDuplicateID(),
-    packageName,
+    packageName: name,
     packagePath: rootPath,
     workspace: "",
   };
