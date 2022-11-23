@@ -2,31 +2,34 @@ import { Log } from "@qinglian/utils";
 import { blue } from "ansi-colors";
 import ChildProcess from "child_process";
 import { WorkspaceInfo } from "./resolvePackages";
-
-const SEMVER_VERSION = ["major", "minor", "patch"];
-
-export const getNpmVersionCommander = (version: string) => {
-  return SEMVER_VERSION.includes(version)
-    ? `npm version ${version}`
-    : `npm version prerelease --preid ${version}`;
-};
+import {
+  getOldVersion,
+  resolveVersion,
+  updatePackageAndLockFileVersion,
+} from "./resolveVersion";
 
 const runRelease = async (info: WorkspaceInfo, version: string) => {
-  const npmVersionCommander = getNpmVersionCommander(version);
+  const currentVersion = getOldVersion(info.packagePath);
+  const newVersion = resolveVersion(currentVersion, version);
+  updatePackageAndLockFileVersion(newVersion, info.packagePath);
   return await new Promise((s) => {
     ChildProcess.exec(
-      `${npmVersionCommander} && npm publish --access public`,
+      `npm publish --access public`,
       {
         cwd: info.packagePath,
       },
       (err, stdout, stderr) => {
         if (err) {
           Log.error(
-            `${blue(info.packageName)} publish failed: ${err?.message}`
+            `${blue(info.packageName)}@${newVersion} publish failed: ${
+              err?.message
+            }`
           );
           s(false);
         } else {
-          Log.success(`${blue(info.packageName)} publish succeed.`);
+          Log.success(
+            `${blue(info.packageName)}@${newVersion} publish succeed.`
+          );
           s(true);
         }
       }

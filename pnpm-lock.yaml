@@ -128,19 +128,23 @@ importers:
       '@qinglian/tsconfig': workspace:*
       '@qinglian/utils': workspace:*
       '@types/inquirer': ^8
+      '@types/semver': ^7.3.13
       ansi-colors: ^4.1.3
       glob: ^8.0.3
       inquirer: ^8.0.0
+      semver: ^7.3.8
       tslib: ^2.4.0
     dependencies:
       ansi-colors: 4.1.3
       glob: 8.0.3
       inquirer: 8.2.5
+      semver: 7.3.8
       tslib: 2.4.1
     devDependencies:
       '@qinglian/tsconfig': link:../tsconfig
       '@qinglian/utils': link:../utils
       '@types/inquirer': 8.2.5
+      '@types/semver': 7.3.13
 
   packages/server:
     specifiers:
@@ -1526,6 +1530,10 @@ packages:
 
   /@types/scheduler/0.16.2:
     resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
+
+  /@types/semver/7.3.13:
+    resolution: {integrity: sha512-21cFJr9z3g5dW8B0CVI9g2O9beqaThGQ6ZFBqHfwhzLDKUxaqTIy3vnfah/UPkfOiF2pLq+tGz+W8RyCskuslw==}
+    dev: true
 
   /@types/serve-static/1.15.0:
     resolution: {integrity: sha512-z5xyF6uh8CbjAu9760KDKsH2FcDxZ2tFCsA4HIMWE6IkiYMXfVoa+4f9KX+FN0ZLsaMw1WNG2ETLA6N+/YA+cg==}

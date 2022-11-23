@@ -4,9 +4,11 @@ import process from "process";
 import * as glob from "glob";
 import { isWorkspaces } from "./workspace";
 import { GenNonDuplicateID } from "./utils";
+import { resolvePackageName } from "./resolvePackageName";
+import { Log } from "@qinglian/utils";
 
 export interface WorkspaceInfo {
-  id: string
+  id: string;
   /**
    * package名称
    */
@@ -33,12 +35,18 @@ export const resolvePackages = async (): Promise<WorkspaceInfo[] | false> => {
         const stat = fs.lstatSync(item);
         if (stat.isDirectory() === true) {
           const parentPath = path.resolve(item, "..");
-          packages.push({
-            packageName: path.basename(item),
-            workspace: path.basename(parentPath),
-            packagePath: item,
-            id: GenNonDuplicateID()
-          });
+          const packageName = resolvePackageName(item);
+          const ignoreFolderName = path.basename(item);
+          packageName
+            ? packages.push({
+                packageName,
+                workspace: path.basename(parentPath),
+                packagePath: item,
+                id: GenNonDuplicateID(),
+              })
+            : Log.warn(
+                `${ignoreFolderName} 不存在package.json或者格式有误，已跳过对应文件夹.`
+              );
         }
       });
     });
