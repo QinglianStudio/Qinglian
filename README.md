@@ -1,31 +1,26 @@
-## Qinglian(青莲)
+<div align='center'><font size=10>Qinglian(青莲)</font></div>
 
-### 天上白玉京，十二楼五城   
+<div align='center'><font size=5>天上白玉京，十二楼五城</font></div>
+
+<br />
+
+<p align="center" >
+  <img src="./public/logo.png" width="100" height="100" />
+</p>
 
 <br />
 <br />
-<br />
 
-一个工具链套件，内涵部分框架初始化模板，常见utils等等。基于`pnpm` & `Turporepo`实现。
+一个工具链套件，内涵部分框架初始化模板，常见 utils 等等。基于`pnpm` & `Turporepo`实现。
 
-#### 开发准备
+### Packages
 
-- Node.js
-  `version >= 14.x`
-  推荐安装方式：
-  1. nvm
-     [nvm 安装方式](https://github.com/nvm-sh/nvm)
-  2. volta
-     [volta 安装方式](https://github.com/volta-cli/volta)
-
-
-- Rust
-  `安装最新版本即可`
-  [Rust 安装方法](https://www.rust-lang.org/tools/install)
-
-
-#### 常见命令
-
-- 单元测试 `npm run test`
-- 新增子包 `npm run init <package-name>`
-- 构建    `npm run build`
+- ##### @qinglian/case-tool
+- ##### @qinglian/cli
+- ##### @qinglian/mock
+- ##### @qinglian/mysql
+- ##### @qinglian/release-tool
+- ##### @qinglian/server
+- ##### @qinglian/sql-parser
+- ##### @qinglian/tsconfig
+- ##### @qinglian/utils
