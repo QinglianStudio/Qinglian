@@ -14,7 +14,7 @@ const runRelease = async (info: WorkspaceInfo, version: string) => {
   updatePackageAndLockFileVersion(newVersion, info.packagePath);
   return await new Promise((s) => {
     ChildProcess.exec(
-      `npm publish --access public`,
+      "npm publish --access public",
       {
         cwd: info.packagePath,
       },
