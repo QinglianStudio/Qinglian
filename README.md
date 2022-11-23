@@ -1,6 +1,6 @@
-<div align='center'><font size=10>Qinglian(青莲)</font></div>
+<div align='center'><font size="10"><strong>Qinglian(青莲)</strong></font></div>
 
-<div align='center'><font size=5>天上白玉京，十二楼五城</font></div>
+<div align='center'><font size="5">天上白玉京，十二楼五城</font></div>
 
 <br />
 
