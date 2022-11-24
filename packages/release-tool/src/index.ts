@@ -1,10 +1,13 @@
 import { selectPackages, selectVersion } from "./prompts";
-import { resolvePackages, WorkspaceInfo } from "./resolvePackages";
-import { releaseNpmPackageVersion } from "./release";
-import { resolveSinglePackage } from "./resolveSinglePackage";
+import {
+  resolvePackages,
+  WorkspaceInfo,
+  releaseNpmPackageVersion,
+  resolveSinglePackage,
+} from "./package";
 
 interface Answer {
-  packages?: WorkspaceInfo[];
+  packages: WorkspaceInfo[];
   version: string;
 }
 

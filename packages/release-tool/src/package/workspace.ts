@@ -1,7 +1,7 @@
 import { Log } from "@qinglian/utils";
 import path from "path";
 import fs from "fs";
-import { isFileExist } from "./utils";
+import { isFileExist } from "../utils";
 import { green } from "ansi-colors";
 
 export const isWorkspaces = (rootPath: string): string[] | false => {

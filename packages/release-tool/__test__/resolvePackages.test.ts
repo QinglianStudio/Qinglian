@@ -1,4 +1,4 @@
-import { resolvePackages } from "../src/resolvePackages";
+import { resolvePackages } from "../src/package";
 
 describe("ResolvePackages Utils Test", () => {
   it("resolvePackages test", () => {

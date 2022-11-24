@@ -3,7 +3,7 @@ import path from "path";
 import process from "process";
 import * as glob from "glob";
 import { isWorkspaces } from "./workspace";
-import { GenNonDuplicateID } from "./utils";
+import { GenNonDuplicateID } from "../utils";
 import { resolvePackageName } from "./resolvePackageName";
 import { Log } from "@qinglian/utils";
 

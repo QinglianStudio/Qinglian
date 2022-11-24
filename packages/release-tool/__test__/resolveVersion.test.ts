@@ -1,4 +1,4 @@
-import { resolveVersion } from "../src/resolveVersion";
+import { resolveVersion } from "../src/package";
 
 describe("ResolveVersion Test", () => {
   it("resolveVersion test", () => {

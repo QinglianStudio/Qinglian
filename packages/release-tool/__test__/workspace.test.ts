@@ -1,5 +1,5 @@
 import process from "process";
-import { isWorkspaces } from "../src/workspace";
+import { isWorkspaces } from "../src/package";
 
 describe("Workspace Utils Test", () => {
   it("isWorkspace test", () => {

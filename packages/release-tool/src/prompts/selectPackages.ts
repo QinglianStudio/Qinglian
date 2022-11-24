@@ -1,7 +1,7 @@
 import { Log } from "@qinglian/utils";
 import { blue } from "ansi-colors";
 import inquirer from "inquirer";
-import { WorkspaceInfo } from "../resolvePackages";
+import { WorkspaceInfo } from "../package/resolvePackages";
 
 export const selectPackages = async (
   packages: WorkspaceInfo[]

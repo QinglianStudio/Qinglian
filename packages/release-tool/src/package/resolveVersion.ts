@@ -3,7 +3,7 @@ import { readFileSync, writeFileSync } from "fs";
 import path from "path";
 import { inc, ReleaseType } from "semver";
 import { SEMVER_VERSION } from "./constant";
-import { isFileExist } from "./utils";
+import { isFileExist } from "../utils";
 
 /**
  * resolve current package version

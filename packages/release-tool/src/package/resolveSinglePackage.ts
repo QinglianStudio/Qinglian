@@ -1,4 +1,4 @@
-import { GenNonDuplicateID } from "./utils";
+import { GenNonDuplicateID } from "../utils";
 import { WorkspaceInfo } from "./resolvePackages";
 import { resolvePackageName } from "./resolvePackageName";
 import { Log } from "@qinglian/utils";
