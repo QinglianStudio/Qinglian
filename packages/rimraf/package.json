@@ -1,0 +1,31 @@
+{
+  "name": "@qinglian/rimraf",
+  "version": "0.0.0",
+  "description": "a rimraf tools with glob",
+  "main": "lib/index.js",
+  "bin": {
+    "qinglian-rimraf": "./lib/bin.js"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "rimraf",
+    "qinglian"
+  ],
+  "author": "ranger",
+  "license": "MIT",
+  "dependencies": {
+    "glob": "^8.0.3",
+    "minimist": "^1.2.8",
+    "rimraf": "^4.1.2",
+    "tslib": "^2.4.0"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/minimist": "^1.2.2"
+  },
+  "files": [
+    "lib"
+  ]
+}
