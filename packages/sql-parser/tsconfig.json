@@ -1,16 +1,14 @@
 {
     "extends": "@qinglian/tsconfig/node.json",
     "compilerOptions": {
-        "importHelpers": false,
-        "types": [
-            "jest",
-            "node"
-        ]
+        "outDir": "./lib"
     },
     "include": [
-        "./scripts/**/*"
+        "./src/**/*",
+        "./__tests__/**/*"
     ],
     "exclude": [
+        "lib",
         "node_modules"
     ]
 }

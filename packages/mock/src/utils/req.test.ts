@@ -3,7 +3,7 @@ import MockAdapter from "axios-mock-adapter";
 import { collectionData } from "./req";
 
 describe("CollectionData", () => {
-  it("returns data when collectionData is called", (done) => {
+  it("returns data when collectionData is called", () => {
     var mock = new MockAdapter(axios);
     const data = { response: true };
     mock
@@ -15,7 +15,6 @@ describe("CollectionData", () => {
       ["1", "2"],
     ]).then((response) => {
       expect(response.data).toEqual(data);
-      done();
     });
   });
 });

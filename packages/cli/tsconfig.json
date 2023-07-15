@@ -3,6 +3,12 @@
   "compilerOptions": {
     "outDir": "./lib"
   },
-  "include": ["./src/**/*", "./libs/**/*"],
-  "exclude": ["lib", "node_modules"]
+  "include": [
+    "./src/**/*",
+    "./libs/**/*"
+  ],
+  "exclude": [
+    "lib",
+    "node_modules"
+  ]
 }

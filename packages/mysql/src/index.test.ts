@@ -1,12 +1,12 @@
 import Mysql from ".";
 import knex from "knex";
 
-jest.mock("knex");
+vitest.mock("knex");
 
 const queryBuilder = {
-  select: jest.fn().mockReturnThis(),
-  from: jest.fn().mockReturnThis(),
-  destroy: jest.fn().mockReturnThis(),
+  select: vitest.fn().mockReturnThis(),
+  from: vitest.fn().mockReturnThis(),
+  destroy: vitest.fn().mockReturnThis(),
 };
 
 const mockConfig = {
@@ -58,7 +58,7 @@ describe("Mysql Test", () => {
       client: "mysql2",
     });
     expect(knex).toBeCalledTimes(5);
-    await dbs.exec('db').select('*').from('info');
+    await dbs.exec("db").select("*").from("info");
     expect(queryBuilder.select).toBeCalledWith("*");
     expect(queryBuilder.from).toBeCalledWith("info");
     expect(queryBuilder.select).toBeCalledTimes(2);

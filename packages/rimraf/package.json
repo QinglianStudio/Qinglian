@@ -1,6 +1,6 @@
 {
   "name": "@qinglian/rimraf",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "a rimraf tools with glob",
   "main": "lib/index.js",
   "bin": {
