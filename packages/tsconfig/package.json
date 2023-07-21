@@ -5,5 +5,8 @@
     "base.json",
     "node.json",
     "react-library.json"
-  ]
+  ],
+  "devDependencies": {
+    "vitest": "^0.33.0"
+  }
 }

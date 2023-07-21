@@ -224,7 +224,11 @@ importers:
         specifier: ^0.1.6
         version: 0.1.7
 
-  packages/tsconfig: {}
+  packages/tsconfig:
+    devDependencies:
+      vitest:
+        specifier: ^0.33.0
+        version: 0.33.0
 
   packages/utils:
     dependencies:
