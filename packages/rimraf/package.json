@@ -16,6 +16,7 @@
   "author": "ranger",
   "license": "MIT",
   "dependencies": {
+    "@qinglian/utils": "workspace:*",
     "glob": "^8.0.3",
     "minimist": "^1.2.8",
     "rimraf": "^4.1.2",

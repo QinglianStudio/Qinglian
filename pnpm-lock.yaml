@@ -189,6 +189,9 @@ importers:
 
   packages/rimraf:
     dependencies:
+      '@qinglian/utils':
+        specifier: workspace:^
+        version: link:../utils
       glob:
         specifier: ^8.0.3
         version: 8.0.3
