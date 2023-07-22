@@ -190,7 +190,7 @@ importers:
   packages/rimraf:
     dependencies:
       '@qinglian/utils':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../utils
       glob:
         specifier: ^8.0.3
