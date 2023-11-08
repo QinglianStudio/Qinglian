@@ -10,7 +10,7 @@ export const resolvePackageName = (packagePath): string | false => {
   }
   try {
     const packageContent = JSON.parse(
-      readFileSync(rootPackageJsonFilePath).toString()
+      readFileSync(rootPackageJsonFilePath).toString(),
     );
     return packageContent.name;
   } catch (error) {

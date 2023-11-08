@@ -21,25 +21,25 @@ const runRelease = async (info: WorkspaceInfo, version: string) => {
       (err, stdout, stderr) => {
         if (err) {
           Log.error(
-            `${blue(`${info.packageName}@${newVersion}`)} publish failed: ${
-              err?.message
-            }`
+            `${blue(
+              `${info.packageName}@${newVersion}`,
+            )} publish failed: ${err?.message}`,
           );
           s(false);
         } else {
           Log.success(
-            `${blue(`${info.packageName}@${newVersion}`)} publish succeed.`
+            `${blue(`${info.packageName}@${newVersion}`)} publish succeed.`,
           );
           s(true);
         }
-      }
+      },
     );
   });
 };
 
 export const releaseNpmPackageVersion = async (
   packages: WorkspaceInfo[],
-  version: string
+  version: string,
 ) => {
   const successPackages = [];
   const failedPackages = [];

@@ -21,8 +21,8 @@ export const resolveEntryPoints = async () => {
   if (!existEntry?.length) {
     console.log(
       colors.red(
-        `Can't find any entry files.Please check src/app.tsx? or src/index.tsx?`
-      )
+        `Can't find any entry files.Please check src/app.tsx? or src/index.tsx?`,
+      ),
     );
     process.exit(-1);
   }

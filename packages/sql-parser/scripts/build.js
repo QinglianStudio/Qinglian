@@ -9,5 +9,5 @@ execSync(
   }.node -- cargo build --message-format=json-render-diagnostics --release`,
   {
     stdio: "inherit",
-  }
+  },
 );

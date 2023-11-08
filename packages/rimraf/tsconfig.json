@@ -1,13 +1,8 @@
 {
-    "extends": "@qinglian/tsconfig/node.json",
-    "compilerOptions": {
-        "outDir": "./lib"
-    },
-    "include": [
-        "./src/**/*"
-    ],
-    "exclude": [
-        "lib",
-        "node_modules"
-    ]
+  "extends": "@qinglian/tsconfig/node.json",
+  "compilerOptions": {
+    "outDir": "./lib"
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["lib", "node_modules"]
 }

@@ -3,6 +3,7 @@
 基于Rust实现的SQL Parser工具。
 
 #### example
+
 ```js
 const { parser } = require("@qinglian/sql-parser");
 
@@ -19,5 +20,5 @@ create table room_user
 `;
 
 const sqlAst = parser(MockSQL);
-console.log(sqlAst)
+console.log(sqlAst);
 ```

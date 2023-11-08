@@ -5,8 +5,8 @@ export const server = async (mode) => {
   if (!(mode && commanders.includes(mode))) {
     console.log(
       `☢ server only support ${color.red(
-        commanders.join("\t")
-      )}.\nYou can run ${color.green(`ql server ${commanders.join("/")}`)}\n`
+        commanders.join("\t"),
+      )}.\nYou can run ${color.green(`ql server ${commanders.join("/")}`)}\n`,
     );
     process.exit(1);
   }

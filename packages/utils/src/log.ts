@@ -15,10 +15,10 @@ const buildLogFactory = (level: keyof typeof LOG_LEVEL) => {
     console.log(
       `${color(
         `${bold(SYMBOL.DOT)} Qinglian ${level} [${dayjs().format(
-          "YYYY-MM-DD HH:mm:ss"
-        )}]: `
+          "YYYY-MM-DD HH:mm:ss",
+        )}]: `,
       )}`,
-      ...params
+      ...params,
     );
   };
 };

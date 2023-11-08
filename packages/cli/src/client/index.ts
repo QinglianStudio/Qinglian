@@ -7,10 +7,10 @@ export const client = async (mode) => {
   if (!(mode && commanders.includes(mode))) {
     console.log(
       `☢ client only support ${color.red(
-        commanders.join("\t")
-      )}.\nYou can run ${color.green(`ql client ${commanders.join("/")}`)}\n`
+        commanders.join("\t"),
+      )}.\nYou can run ${color.green(`ql client ${commanders.join("/")}`)}\n`,
     );
     process.exit(1);
   }
-  mode === 'start' && dev();
+  mode === "start" && dev();
 };

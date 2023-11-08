@@ -45,7 +45,7 @@ export const resolvePackages = async (): Promise<WorkspaceInfo[] | false> => {
                 id: GenNonDuplicateID(),
               })
             : Log.warn(
-                `${ignoreFolderName} 不存在package.json或者格式有误，已跳过对应文件夹.`
+                `${ignoreFolderName} 不存在package.json或者格式有误，已跳过对应文件夹.`,
               );
         }
       });

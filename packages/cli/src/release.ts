@@ -6,7 +6,7 @@ export const release = async (...args) => {
   const { tag } = options || {};
   if (tag) {
     execa("sh", [join(__dirname, "../cmd/git_tag_release.sh")]).stdout.pipe(
-      process.stdout
+      process.stdout,
     );
   }
 };

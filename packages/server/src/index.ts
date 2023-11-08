@@ -2,7 +2,7 @@ import Koa from "koa";
 
 class App extends Koa {
   constructor() {
-    super()
+    super();
   }
 }
 

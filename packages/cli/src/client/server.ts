@@ -18,16 +18,16 @@ export const dev = async () => {
         format: "iife",
         chunkNames: "[name]",
         target: ["es6"],
-      }
+      },
     )
     .then(async (result) => {
       console.log(
-        `Server is running at: ${colors.green(`http://${Ips}:${result.port}`)}`
+        `Server is running at: ${colors.green(`http://${Ips}:${result.port}`)}`,
       );
       console.log(
         `Server is running at: ${colors.green(
-          `http://127.0.0.1:${result.port}`
-        )}`
+          `http://127.0.0.1:${result.port}`,
+        )}`,
       );
     });
 };

@@ -18,7 +18,7 @@ const sqlParser = (sql) => {
   let runtimeBin = PlatformTargetMap[platform];
   if (!runtimeBin) {
     throw Error(
-      `${platform} bin is not existed.\n\nPlease submit a issue.https://github.com/qinglianDesign/so/issues/new`
+      `${platform} bin is not existed.\n\nPlease submit a issue.https://github.com/qinglianDesign/so/issues/new`,
     );
   }
   // M1 MAC

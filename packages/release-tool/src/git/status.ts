@@ -17,7 +17,7 @@ export const checkGitCleanStatus = async (basePath: string = process.cwd()) => {
           s(false);
         }
         s(std ? false : true);
-      }
+      },
     );
   });
   return result;
@@ -25,7 +25,7 @@ export const checkGitCleanStatus = async (basePath: string = process.cwd()) => {
 
 export const gitCommit = async (
   commitMessage: string,
-  basePath: string = process.cwd()
+  basePath: string = process.cwd(),
 ) => {
   const result = await new Promise((s) => {
     exec(
@@ -38,7 +38,7 @@ export const gitCommit = async (
           s(false);
         }
         s(std ? false : true);
-      }
+      },
     );
   });
   return result;

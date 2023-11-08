@@ -8,7 +8,7 @@ const init = async () => {
   const args = process.argv;
   if (!(args?.[2] && PackageNameReg.test(args?.[2]))) {
     console.log(
-      "\n\n初始化Package请执行命令: npm run init package-name\n\npackage-name仅支持以下格式: xx,xx-xx\n\n"
+      "\n\n初始化Package请执行命令: npm run init package-name\n\npackage-name仅支持以下格式: xx,xx-xx\n\n",
     );
     process.exit(-1);
   }

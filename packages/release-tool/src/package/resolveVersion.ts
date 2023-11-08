@@ -43,7 +43,7 @@ export const resolveVersion = (version: string, release: string) => {
  */
 export const updatePackageAndLockFileVersion = (
   version: string,
-  packagePath: string
+  packagePath: string,
 ) => {
   const packageFilePath = path.join(packagePath, "./package.json");
   const packageLockFilePath = path.join(packagePath, "./package-lock.json");
@@ -62,12 +62,12 @@ export const updatePackageAndLockFileVersion = (
   if (isFileExist(packageLockFilePath)) {
     try {
       const packageContent = JSON.parse(
-        readFileSync(packageLockFilePath).toString()
+        readFileSync(packageLockFilePath).toString(),
       );
       packageContent.version = version;
       writeFileSync(
         packageLockFilePath,
-        JSON.stringify(packageContent, null, 2)
+        JSON.stringify(packageContent, null, 2),
       );
     } catch (error) {
       Log.error(`${packageLockFilePath} 更新失败.${error.message}\n`);

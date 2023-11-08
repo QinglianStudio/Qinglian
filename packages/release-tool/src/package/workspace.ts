@@ -13,14 +13,14 @@ export const isWorkspaces = (rootPath: string): string[] | false => {
   }
 
   const packageContent = JSON.parse(
-    fs.readFileSync(rootPackageJsonFilePath).toString()
+    fs.readFileSync(rootPackageJsonFilePath).toString(),
   );
 
   const workspaces = packageContent.workspaces;
 
   if (workspaces) {
     Log.info(
-      green("当前存在workspaces，将采用workspaces模式默认加载解析packages\n")
+      green("当前存在workspaces，将采用workspaces模式默认加载解析packages\n"),
     );
     return workspaces;
   } else {

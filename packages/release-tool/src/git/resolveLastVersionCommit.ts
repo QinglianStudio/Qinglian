@@ -15,7 +15,7 @@ export interface CommitInfo {
 
 export const resolveLastVersionCommitInfo = async (
   filePath: string,
-  content: string | RegExp
+  content: string | RegExp,
 ) => {
   const result: string | false = await new Promise((s) => {
     // git log info format shell refer: https://gist.github.com/textarcana/1306223#file-git-log2json-sh
@@ -26,7 +26,7 @@ export const resolveLastVersionCommitInfo = async (
           s(false);
         }
         s(out);
-      }
+      },
     );
   });
   if (!result) {
@@ -43,7 +43,7 @@ export const resolveLastVersionCommitInfo = async (
 export const getCommitInfoSinceRefCommit = async (
   commit: string,
   latestCommit = "HEAD",
-  filePath?: string
+  filePath?: string,
 ): Promise<CommitInfo[]> => {
   const result: string | false = await new Promise((s) => {
     exec(
@@ -55,7 +55,7 @@ export const getCommitInfoSinceRefCommit = async (
           s(false);
         }
         s(out);
-      }
+      },
     );
   });
   if (!result) {

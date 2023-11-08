@@ -9,7 +9,7 @@ import { sqlGen } from "./sql-gen";
 const packageFile = join(__dirname, "../package.json");
 
 const { version: cliVersion } = JSON.parse(
-  readFileSync(packageFile).toString()
+  readFileSync(packageFile).toString(),
 );
 
 const program = new Command();
@@ -40,8 +40,11 @@ export const run = async () => {
   program
     .command("sql-gen")
     .description("use sql file to generate typescript interface")
-    .option('-p, --path <path>','sql file path and generate interface file will related this path')
-    .option('-n, --name <name>','generate interface file name,default is mode')
+    .option(
+      "-p, --path <path>",
+      "sql file path and generate interface file will related this path",
+    )
+    .option("-n, --name <name>", "generate interface file name,default is mode")
     .action(sqlGen);
 
   program.parse(process.argv);

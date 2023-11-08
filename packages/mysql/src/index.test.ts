@@ -51,7 +51,7 @@ describe("Mysql Test", () => {
         db: mockConfig,
         db2: mockConfig,
       },
-      { multiple: true }
+      { multiple: true },
     );
     expect(knex).toBeCalledWith({
       connection: mockConfig,

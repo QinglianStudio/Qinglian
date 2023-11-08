@@ -7,17 +7,10 @@
     "checkJs": true,
     "noEmitOnError": true,
     "noUnusedLocals": true,
-    "lib": [
-      "ES2015",
-      "DOM"
-    ],
+    "lib": ["ES2015", "DOM"],
     "resolveJsonModule": true,
-    "types": [
-      "vitest/globals"
-    ]
+    "types": ["vitest/globals"]
   },
   "rootDit": ".",
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

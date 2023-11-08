@@ -4,7 +4,7 @@ import inquirer from "inquirer";
 import { WorkspaceInfo } from "../package/resolvePackages";
 
 export const selectPackages = async (
-  packages: WorkspaceInfo[]
+  packages: WorkspaceInfo[],
 ): Promise<WorkspaceInfo[]> => {
   const workspacePackages = packages.reduce((t, i) => {
     if (!t[i.workspace]) {
@@ -24,7 +24,7 @@ export const selectPackages = async (
             value: p.id,
             name: p.packageName,
           };
-        })
+        }),
       );
       t.push(new inquirer.Separator("\n"));
       return t;
