@@ -1,8 +1,11 @@
 {
-  "extends": "@qinglian/tsconfig/node.json",
   "compilerOptions": {
-    "importHelpers": false,
-    "types": ["node"]
+    "esModuleInterop": true,
+    "module": "CommonJS",
+    "isolatedModules": true,
+    "declaration": true,
+    "importHelpers": true,
+    "target": "ES3"
   },
   "include": ["./scripts/**/*"],
   "exclude": ["node_modules"]
