@@ -17,7 +17,8 @@
     "glob": "^8.0.3",
     "inquirer": "^8.0.0",
     "semver": "^7.3.8",
-    "tslib": "^2.4.0"
+    "tslib": "^2.4.0",
+    "tsup": "^7.2.0"
   },
   "devDependencies": {
     "@qinglian/tsconfig": "workspace:*",

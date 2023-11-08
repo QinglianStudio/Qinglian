@@ -1,8 +1,0 @@
-{
-  "extends": "@qinglian/tsconfig/node.json",
-  "compilerOptions": {
-    "outDir": "./lib"
-  },
-  "include": ["./src/**/*", "./__tests__/**/*"],
-  "exclude": ["lib", "node_modules"]
-}
