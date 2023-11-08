@@ -7,7 +7,7 @@
     "qinglian-rimraf": "./lib/bin.js"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsup"
   },
   "keywords": [
     "rimraf",

@@ -6,7 +6,7 @@
     "ql": "./bin/index.js"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsup"
   },
   "author": "southorange1228",
   "license": "MIT",

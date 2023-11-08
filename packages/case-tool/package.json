@@ -2,16 +2,17 @@
   "name": "@qinglian/case-tool",
   "version": "0.0.2",
   "description": "a tool used to validate name case & translate",
-  "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "tsup"
   },
   "keywords": [
     "name-case",
     "validate"
   ],
-  "author": "southorange1228",
+  "author": "southorange0929",
   "license": "MIT",
   "dependencies": {
     "tslib": "^2.4.0",

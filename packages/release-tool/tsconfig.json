@@ -1,8 +1,12 @@
 {
-  "extends": "@qinglian/tsconfig/node.json",
   "compilerOptions": {
-    "outDir": "./lib"
+    "esModuleInterop": true,
+    "module": "CommonJS",
+    "isolatedModules": true,
+    "declaration": true,
+    "importHelpers": true,
+    "target": "ES3"
   },
-  "include": ["./src/**/*"],
-  "exclude": ["lib", "node_modules"]
+  "rootDit": ".",
+  "include": ["src"]
 }
